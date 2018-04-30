@@ -20,7 +20,7 @@ const errorHandler = (req, res) => {
         ERROR: "EXCEPTION at" + req.body + "Expected (name, tel, email)"
     });
     //CHECK IF THE REQUEST BODY TYPES [NAME = STRING, TEL = NUMBER, && EMAIL = STRING]
-    if (typeof req.body.name != 'string' || typeof req.body.tel != 'number' || typeof req.body.email != 'string')
+    if (typeof req.body.name != 'string' || typeof req.body.tel != 'string' || typeof req.body.email != 'string')
         //RETURNS ERRROR 422 (UNPROCESSABLE ENTITY) WITH A JSON RESPONSE.
         return res.status(422).json({
             ERROR: "EXCEPTION at" + req.body + "Expected (name : STRING, tel : NUMBER, email : STRING)"
